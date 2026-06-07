@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Speaking — Lauren Meisner</title>
+<meta name="description" content="Lauren Meisner speaks on the attention economy, Gen Z engagement and the future of media — keynotes, panels and moderation." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23E9D8FB'/%3E%3Cstop offset='.55' stop-color='%23FBE7D6'/%3E%3Cstop offset='1' stop-color='%23F8D2E2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2' y='2' width='60' height='60' rx='16' fill='url(%23g)'/%3E%3Cg transform='translate(13,14) scale(1.7)'%3E%3Cpath d='M3 2l7 18 2.5-7.5L20 10z' fill='%23fff' stroke='%2333293B' stroke-width='2.2' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E" />
+<style>
+  :root{
+    --ink:#33293B;--muted:#74657F;--accent:#6B46C1;
+    --paper:#FBF6F4;--paper-edge:#EADFE6;--bar:#F3EAF1;--cream:#FCF6FA;
+    --ui:"DM Sans",system-ui,sans-serif;--mono:"DM Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--ui);background:#FDEFF4;color:var(--ink);-webkit-font-smoothing:antialiased;position:relative;min-height:100vh;}
+  .aura{position:fixed;inset:-22%;z-index:0;background:radial-gradient(40% 50% at 20% 24%,#C2EBD4 0%,transparent 60%),radial-gradient(46% 54% at 80% 18%,#FFD9B0 0%,transparent 60%),radial-gradient(52% 56% at 86% 72%,#FFC6E6 0%,transparent 62%),radial-gradient(46% 52% at 22% 82%,#FFF0AE 0%,transparent 60%),radial-gradient(60% 62% at 52% 52%,#E6CCFF 0%,transparent 66%),linear-gradient(135deg,#FDEFF4,#F2F7EE);filter:saturate(1.04);animation:drift 36s ease-in-out infinite alternate;}
+  @keyframes drift{from{transform:translate(0,0) rotate(0deg) scale(1.06);}to{transform:translate(-3%,2%) rotate(4deg) scale(1.13);}}
+  .grid{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.32;background-image:linear-gradient(rgba(255,255,255,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.6) 1px,transparent 1px);background-size:86px 86px;-webkit-mask-image:radial-gradient(circle at 50% 40%,#000 20%,transparent 92%);mask-image:radial-gradient(circle at 50% 40%,#000 20%,transparent 92%);}
+  .spark{position:fixed;z-index:2;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z' fill='white'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(0 0 6px rgba(255,255,255,.85));animation:tw 5s ease-in-out infinite;pointer-events:none;}
+  @keyframes tw{0%,100%{opacity:.3;transform:scale(.82) rotate(0deg);}50%{opacity:.9;transform:scale(1.08) rotate(8deg);}}
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.38;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  a{color:inherit;}
+  .navbar{position:relative;z-index:20;display:flex;justify-content:center;align-items:center;gap:12px;padding:26px 16px 10px;flex-wrap:wrap;}
+  .pill{border:1.5px solid var(--ink);border-radius:999px;padding:9px 24px;font-size:15.5px;font-weight:500;color:var(--ink);background:rgba(255,255,255,.28);backdrop-filter:blur(3px);transition:background .2s,transform .15s;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;}
+  .pill:hover{background:rgba(255,255,255,.6);transform:translateY(-1px);}
+  .pill.active{background:var(--cream);text-decoration:none;box-shadow:0 2px 0 rgba(51,41,59,.25);}
+  .window{position:relative;z-index:10;max-width:980px;margin:14px auto 60px;background:var(--paper);border:1px solid var(--paper-edge);border-radius:12px;box-shadow:0 34px 80px -34px rgba(80,40,80,.5),0 2px 0 rgba(255,255,255,.7) inset;overflow:hidden;animation:open .5s cubic-bezier(.2,.8,.2,1) both;}
+  @keyframes open{from{opacity:0;transform:translateY(14px) scale(.99);}to{opacity:1;transform:none;}}
+  .titlebar{display:flex;align-items:center;gap:14px;padding:11px 16px;background:var(--bar);border-bottom:1px solid var(--paper-edge);background-image:repeating-linear-gradient(180deg,rgba(80,60,95,.10) 0 1px,transparent 1px 4px);}
+  .dots{display:flex;gap:7px;}
+  .dots i{width:12px;height:12px;border-radius:50%;display:block;border:1px solid rgba(0,0,0,.10);}
+  .dots i:nth-child(1){background:#B7E6C8;}.dots i:nth-child(2){background:#FFD3A6;}.dots i:nth-child(3){background:#FFC2DF;}
+  .wtitle{font-family:var(--mono);font-size:13px;color:var(--muted);letter-spacing:.02em;}
+  .wmeta{margin-left:auto;font-family:var(--mono);font-size:11.5px;color:var(--muted);}
+  .body{padding:54px clamp(26px,5vw,72px) 60px;}
+  .kicker{font-family:var(--mono);font-size:12.5px;color:var(--accent);letter-spacing:.04em;margin-bottom:18px;}
+  h1{font-size:clamp(42px,6.5vw,76px);font-weight:700;letter-spacing:-.02em;line-height:.98;color:var(--ink);}
+  .intro{margin-top:26px;font-size:clamp(17px,1.6vw,20px);line-height:1.6;max-width:62ch;color:var(--ink);opacity:.86;}
+  .sec{margin-top:58px;}
+  .sec h2{font-size:13px;font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:var(--muted);padding-bottom:12px;border-bottom:1px solid var(--paper-edge);margin-bottom:28px;}
+  .sec h2 span{color:var(--ink);}
+  .cta{margin-top:60px;padding:34px;border:1px dashed var(--paper-edge);border-radius:12px;background:#FCFAFF;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+  .cta p{font-size:20px;font-weight:600;color:var(--ink);}
+  .cta a{font-family:var(--mono);font-size:14px;background:var(--ink);color:#fff;padding:13px 22px;border-radius:8px;text-decoration:none;transition:transform .15s,background .2s;}
+  .cta a:hover{background:var(--accent);transform:translateY(-2px);}
+
+  .topics{display:grid;grid-template-columns:1fr 1fr;gap:14px 34px;}
+  .topics div{display:flex;gap:13px;font-size:16.5px;line-height:1.45;align-items:baseline;}
+  .topics b{font-family:var(--mono);color:var(--accent);font-size:13px;font-weight:500;flex:none;}
+  .entry{display:grid;grid-template-columns:128px 1fr;gap:26px;padding:24px 0;border-top:1px solid var(--paper-edge);}
+  .entry:first-of-type{border-top:none;}
+  .entry .meta{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.6;}
+  .entry .meta .role{display:block;width:fit-content;margin-top:7px;padding:2px 9px;border:1px solid var(--paper-edge);border-radius:999px;color:var(--ink);background:#FCFAFF;}
+  .entry h3{font-size:21px;font-weight:600;letter-spacing:-.01em;color:var(--ink);}
+  .entry p{margin-top:8px;font-size:15.5px;line-height:1.6;color:var(--ink);opacity:.85;max-width:64ch;}
+  .entry a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(107,70,193,.35);}
+  .entry a:hover{border-color:var(--accent);}
+  .pending{font-family:var(--mono);font-size:11.5px;color:var(--muted);}
+
+  @media (max-width:720px){
+    .navbar{gap:8px;padding:18px 12px 8px;}.pill{padding:7px 15px;font-size:14px;}
+    .window{margin:8px 10px 40px;border-radius:10px;}.body{padding:36px 22px 44px;}.wmeta{display:none;}
+    .topics{grid-template-columns:1fr;}.entry{grid-template-columns:1fr;gap:10px;}.services{grid-template-columns:1fr;}.grid{background-size:60px 60px;}
+  }
+  .gallery{column-count:3;column-gap:14px;margin-top:4px;}
+  .print{break-inside:avoid;margin:0 0 14px;background:#fff;padding:8px;border-radius:8px;box-shadow:0 14px 30px -18px rgba(80,45,80,.5);}
+  .print img{width:100%;display:block;border-radius:4px;}
+  .print:nth-child(odd){transform:rotate(-.8deg);}
+  .print:nth-child(even){transform:rotate(.8deg);}
+  @media (max-width:760px){.gallery{column-count:2;}}
+</style>
+</head>
+<body>
+
+  <div class="aura"></div>
+  <div class="grid"></div>
+  <span class="spark" style="left:10%;top:24%;width:26px;height:26px;animation-delay:0s;"></span>
+  <span class="spark" style="left:90%;top:30%;width:20px;height:20px;animation-delay:1.2s;"></span>
+  <span class="spark" style="left:85%;top:82%;width:30px;height:30px;animation-delay:.6s;"></span>
+  <span class="spark" style="left:13%;top:80%;width:18px;height:18px;animation-delay:1.8s;"></span>
+
+<nav class="navbar">
+    <a class="pill" href="/">home</a>
+    <a class="pill" href="/about/">about</a>
+    <a class="pill active" href="/speaking/">speaking</a>
+    <a class="pill" href="/consulting/">consulting</a>
+    <a class="pill" href="/ventures/">ventures</a>
+    <a class="pill" href="/press/">press</a>
+    <a class="pill" href="/contact/">contact</a>
+  </nav>
+
+  <main class="window">
+    <div class="titlebar">
+      <span class="dots"><i></i><i></i><i></i></span>
+      <span class="wtitle">speaking.app</span>
+      <span class="wmeta">keynotes · panels · moderation</span>
+    </div>
+    <div class="body">
+      <p class="kicker">// on stage</p>
+      <h1>Speaking.</h1>
+      <p class="intro">Lauren speaks on the attention economy and new media. Her expertise lies in how young audiences actually pay attention online, and what brands and media have to do to earn it. She keynotes, moderates and joins panels across founder festivals, global tech summits and industry events, drawing on what she's learned building Centennial World from the ground up.</p>
+
+      <div class="sec">
+        <h2>// <span>talks &amp; topics</span></h2>
+        <div class="topics">
+          <div><b>01</b><span>The attention economy &amp; what counts as “authentic” attention</span></div>
+          <div><b>02</b><span>“I Hate Ads:” Engaging Gen Z with branded content</span></div>
+          <div><b>03</b><span>The future of media consumption for youth audiences</span></div>
+          <div><b>04</b><span>Bootstrapping a modern media company</span></div>
+          <div><b>05</b><span>The creator economy &amp; content that cuts through</span></div>
+          <div><b>06</b><span>Capitalising on cancel culture: Speaking Gen Z’s language online</span></div>
+          <div><b>07</b><span>How TikTok democratised viral fame for both brands &amp; creators</span></div>
+          <div><b>08</b><span>Podcasting for Gen Z: Platforms, storytelling &amp; promotion</span></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2>// <span>selected engagements</span></h2>
+
+        <div class="entry">
+          <div class="meta">Sunrise by Blackbird<br>Startup festival<span class="role">solo</span></div>
+          <div>
+            <h3>Bootstrapping Centennial World</h3>
+            <p>A standalone presentation at Blackbird's annual founder festival on Centennial World as a business — how Lauren transformed it from a digital publisher into a podcast network for youth audiences, entirely bootstrapped.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="meta">Sunrise by Blackbird<br>Startup festival<span class="role">panel</span></div>
+          <div>
+            <h3>Media Extinction Or Evolution: If Tech Is Eating Journalism, Who's Watching The Watchdogs?</h3>
+            <p>A panel on the future of journalism and trust, alongside <a href="https://www.linkedin.com/in/bronwenclune/" target="_blank" rel="noopener">Bronwen Clune</a> (journalist at Capital Brief, moderating), <a href="https://www.linkedin.com/in/helenxhzhang/" target="_blank" rel="noopener">Helen Zhang</a> (co-founder of <a href="https://www.internationalintrigue.io/" target="_blank" rel="noopener">International Intrigue</a>, former diplomat and deputy chief of staff in Eric Schmidt's office) and <a href="https://www.linkedin.com/in/timburrowes/" target="_blank" rel="noopener">Tim Burrowes</a> (founder of Mumbrella and author of <em>Media Unmade</em>).</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="meta">Web Summit<span class="role">moderator</span></div>
+          <div>
+            <h3>The Future Of Media Consumption For Youth Audiences</h3>
+            <p>Moderated a discussion between <a href="https://www.instagram.com/afaidd/" target="_blank" rel="noopener">Ahmed Faid</a> (Co-Founder &amp; CEO of <a href="https://www.doseofsociety.com" target="_blank" rel="noopener">Dose of Society</a>) and <a href="https://www.linkedin.com/in/stefanofallaha/" target="_blank" rel="noopener">Stefano Fallaha</a> (CEO of <a href="https://podeo.co" target="_blank" rel="noopener">Podeo</a>) on where and how the next generation consumes media, and what that means for publishers and platforms.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="meta">SXSW Sydney<span class="role">speaker</span></div>
+          <div>
+            <h3>Networking In The Digital Age</h3>
+            <p>A session on building real connection in an online-first world.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="meta">Archetype "Connect"<br>Agency event<span class="role">panel</span></div>
+          <div>
+            <h3>What Is "Authentic" Attention?</h3>
+            <p>A panel on the attention economy and how we should define authentic attention in a feed that rewards everything but.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="meta">Sydney &amp; Melbourne<span class="role">keynote</span></div>
+          <div>
+            <h3>Engaging Gen Z With Branded Content</h3>
+            <p>Two keynotes on how brands can best reach Gen Z, and how marketers can reach this anti-ad generation with branded content.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="meta">Pinterest, Instagram &amp; TikTok<span class="role">panels</span></div>
+          <div>
+            <h3>Creator Economy, Content &amp; Platforms</h3>
+            <p>Speaking on panels for Pinterest and Instagram on the creator economy, content and platforms, plus representing TikTok ANZ on <em>Sunrise</em> (Channel 7's morning program).</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="sec">
+        <h2>// <span>on stage</span></h2>
+        <div class="gallery">
+          <figure class="print"><img src="/lauren-meisner-on-a-panel-at-sxsw-sydney.jpg" alt="Lauren Meisner on a panel at SXSW Sydney" /></figure>
+          <figure class="print"><img src="/lauren-meisner-on-a-panel-on-authentic-att.jpg" alt="Lauren Meisner on a panel on authentic attention" /></figure>
+          <figure class="print"><img src="/lauren-meisner-moderating-at-web-summit.jpg" alt="Lauren Meisner moderating at Web Summit" /></figure>
+          <figure class="print"><img src="/lauren-meisner-speaking-on-a-panel.jpg" alt="Lauren Meisner speaking on a panel" /></figure>
+          <figure class="print"><img src="/lauren-meisner-presenting-the-virality-myt.jpg" alt="Lauren Meisner presenting ‘The Virality Myth’" /></figure>
+          <figure class="print"><img src="/lauren-meisner-keynoting-on-gen-z-and-tikt.jpg" alt="Lauren Meisner keynoting on Gen Z and TikTok" /></figure>
+        </div>
+      </div>
+
+      <div class="cta">
+        <p>Want Lauren on your stage?</p>
+        <a href="/contact/">Get in touch →</a>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Press — Lauren Meisner</title>
+<meta name="description" content="Expert commentary, recognition and bylines — Lauren Meisner across AdNews, Pedestrian, ELLE, Marketing Mag and more." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23E9D8FB'/%3E%3Cstop offset='.55' stop-color='%23FBE7D6'/%3E%3Cstop offset='1' stop-color='%23F8D2E2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2' y='2' width='60' height='60' rx='16' fill='url(%23g)'/%3E%3Cg transform='translate(13,14) scale(1.7)'%3E%3Cpath d='M3 2l7 18 2.5-7.5L20 10z' fill='%23fff' stroke='%2333293B' stroke-width='2.2' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E" />
+<style>
+
+  :root{
+    --ink:#33293B;--muted:#74657F;--accent:#6B46C1;
+    --paper:#FBF6F4;--paper-edge:#EADFE6;--bar:#F3EAF1;--cream:#FCF6FA;
+    --ui:"DM Sans",system-ui,sans-serif;--mono:"DM Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--ui);background:#FDEFF4;color:var(--ink);-webkit-font-smoothing:antialiased;position:relative;min-height:100vh;}
+  .aura{position:fixed;inset:-22%;z-index:0;background:radial-gradient(40% 50% at 20% 24%,#C2EBD4 0%,transparent 60%),radial-gradient(46% 54% at 80% 18%,#FFD9B0 0%,transparent 60%),radial-gradient(52% 56% at 86% 72%,#FFC6E6 0%,transparent 62%),radial-gradient(46% 52% at 22% 82%,#FFF0AE 0%,transparent 60%),radial-gradient(60% 62% at 52% 52%,#E6CCFF 0%,transparent 66%),linear-gradient(135deg,#FDEFF4,#F2F7EE);filter:saturate(1.04);animation:drift 36s ease-in-out infinite alternate;}
+  @keyframes drift{from{transform:translate(0,0) rotate(0deg) scale(1.06);}to{transform:translate(-3%,2%) rotate(4deg) scale(1.13);}}
+  .grid{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.32;background-image:linear-gradient(rgba(255,255,255,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.6) 1px,transparent 1px);background-size:86px 86px;-webkit-mask-image:radial-gradient(circle at 50% 40%,#000 20%,transparent 92%);mask-image:radial-gradient(circle at 50% 40%,#000 20%,transparent 92%);}
+  .spark{position:fixed;z-index:2;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z' fill='white'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(0 0 6px rgba(255,255,255,.85));animation:tw 5s ease-in-out infinite;pointer-events:none;}
+  @keyframes tw{0%,100%{opacity:.3;transform:scale(.82) rotate(0deg);}50%{opacity:.9;transform:scale(1.08) rotate(8deg);}}
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.38;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  a{color:inherit;}
+  .navbar{position:relative;z-index:20;display:flex;justify-content:center;align-items:center;gap:12px;padding:26px 16px 10px;flex-wrap:wrap;}
+  .pill{border:1.5px solid var(--ink);border-radius:999px;padding:9px 24px;font-size:15.5px;font-weight:500;color:var(--ink);background:rgba(255,255,255,.28);backdrop-filter:blur(3px);transition:background .2s,transform .15s;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;}
+  .pill:hover{background:rgba(255,255,255,.6);transform:translateY(-1px);}
+  .pill.active{background:var(--cream);text-decoration:none;box-shadow:0 2px 0 rgba(51,41,59,.25);}
+  .window{position:relative;z-index:10;max-width:980px;margin:14px auto 60px;background:var(--paper);border:1px solid var(--paper-edge);border-radius:12px;box-shadow:0 34px 80px -34px rgba(80,40,80,.5),0 2px 0 rgba(255,255,255,.7) inset;overflow:hidden;animation:open .5s cubic-bezier(.2,.8,.2,1) both;}
+  @keyframes open{from{opacity:0;transform:translateY(14px) scale(.99);}to{opacity:1;transform:none;}}
+  .titlebar{display:flex;align-items:center;gap:14px;padding:11px 16px;background:var(--bar);border-bottom:1px solid var(--paper-edge);background-image:repeating-linear-gradient(180deg,rgba(80,60,95,.10) 0 1px,transparent 1px 4px);}
+  .dots{display:flex;gap:7px;}
+  .dots i{width:12px;height:12px;border-radius:50%;display:block;border:1px solid rgba(0,0,0,.10);}
+  .dots i:nth-child(1){background:#B7E6C8;}.dots i:nth-child(2){background:#FFD3A6;}.dots i:nth-child(3){background:#FFC2DF;}
+  .wtitle{font-family:var(--mono);font-size:13px;color:var(--muted);letter-spacing:.02em;}
+  .wmeta{margin-left:auto;font-family:var(--mono);font-size:11.5px;color:var(--muted);}
+  .body{padding:54px clamp(26px,5vw,72px) 60px;}
+  .kicker{font-family:var(--mono);font-size:12.5px;color:var(--accent);letter-spacing:.04em;margin-bottom:18px;}
+  h1{font-size:clamp(42px,6.5vw,76px);font-weight:700;letter-spacing:-.02em;line-height:.98;color:var(--ink);}
+  .intro{margin-top:26px;font-size:clamp(17px,1.6vw,20px);line-height:1.6;max-width:62ch;color:var(--ink);opacity:.86;}
+  .sec{margin-top:56px;}
+  .sec h2{font-size:13px;font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:var(--muted);padding-bottom:12px;border-bottom:1px solid var(--paper-edge);margin-bottom:26px;}
+  .sec h2 span{color:var(--ink);}
+  .cta{margin-top:58px;padding:34px;border:1px dashed var(--paper-edge);border-radius:12px;background:#FCFAFF;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+  .cta p{font-size:20px;font-weight:600;color:var(--ink);}
+  .cta a{font-family:var(--mono);font-size:14px;background:var(--ink);color:#fff;padding:13px 22px;border-radius:8px;text-decoration:none;transition:transform .15s,background .2s;}
+  .cta a:hover{background:var(--accent);transform:translateY(-2px);}
+
+  .tags{display:flex;flex-wrap:wrap;gap:10px;}
+  .tags span{font-family:var(--mono);font-size:13.5px;padding:9px 15px;border:1px solid var(--paper-edge);border-radius:999px;background:#fff;}
+  .reclist{list-style:none;}
+  .reclist li{padding:16px 0;border-top:1px solid var(--paper-edge);font-size:16.5px;line-height:1.5;display:flex;gap:14px;align-items:baseline;}
+  .reclist li:first-child{border-top:none;}
+  .reclist li b{font-family:var(--mono);font-size:12px;color:var(--accent);flex:none;}
+  .subnote{margin-top:14px;font-size:13.5px;color:var(--muted);}
+
+  @media (max-width:760px){
+    .navbar{gap:8px;padding:18px 12px 8px;}.pill{padding:7px 15px;font-size:14px;}
+    .window{margin:8px 10px 40px;border-radius:10px;}.body{padding:36px 22px 44px;}.wmeta{display:none;}
+    .about-grid{grid-template-columns:1fr;}.venture{grid-template-columns:1fr;gap:18px;}.routes{grid-template-columns:1fr;}.grid{background-size:60px 60px;}
+  }
+  .photoband{max-width:var(--pw,520px);margin:34px auto 0;background:#fff;padding:10px;border-radius:12px;box-shadow:0 22px 46px -24px rgba(80,45,80,.5);}
+  .photoband img{width:100%;display:block;border-radius:7px;aspect-ratio:var(--pr,4/3);object-fit:cover;}
+  .photoband figcaption{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center;padding:10px 0 3px;letter-spacing:.04em;}
+  .presslist{list-style:none;margin-top:2px;}
+  .presslist li{border-top:1px solid var(--paper-edge);}
+  .presslist li:first-child{border-top:none;}
+  .presslist a{display:block;padding:12px 2px;text-decoration:none;}
+  .presslist .src{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;display:block;margin-bottom:3px;}
+  .presslist .ph{font-size:16.5px;line-height:1.4;color:var(--ink);transition:color .15s;}
+  .presslist a:hover .ph{color:var(--accent);}
+</style>
+</head>
+<body>
+
+  <div class="aura"></div>
+  <div class="grid"></div>
+  <span class="spark" style="left:10%;top:24%;width:26px;height:26px;animation-delay:0s;"></span>
+  <span class="spark" style="left:90%;top:30%;width:20px;height:20px;animation-delay:1.2s;"></span>
+  <span class="spark" style="left:85%;top:82%;width:30px;height:30px;animation-delay:.6s;"></span>
+  <span class="spark" style="left:13%;top:80%;width:18px;height:18px;animation-delay:1.8s;"></span>
+
+  <nav class="navbar">
+    <a class="pill" href="/">home</a>
+    <a class="pill" href="/about/">about</a>
+    <a class="pill" href="/speaking/">speaking</a>
+    <a class="pill" href="/consulting/">consulting</a>
+    <a class="pill" href="/ventures/">ventures</a>
+    <a class="pill active" href="/press/">press</a>
+    <a class="pill" href="/contact/">contact</a>
+  </nav>
+
+  <main class="window">
+    <div class="titlebar"><span class="dots"><i></i><i></i><i></i></span><span class="wtitle">press</span><span class="wmeta">commentary &middot; recognition</span></div>
+    <div class="body">
+      <p class="kicker">// in the press</p>
+      <h1>Press.</h1>
+      <p class="intro">Lauren is a regular expert voice on internet culture, Gen Z and the attention economy across news media, podcasting, and industry publications.</p>
+      <figure class="photoband" style="--pw:540px;--pr:3/2;"><img src="/lauren-meisner-in-the-studio.jpg" alt="Lauren Meisner in the studio" /><figcaption>On air, talking internet culture</figcaption></figure>
+
+      <div class="sec">
+        <h2>// <span>selected coverage</span></h2>
+        <ul class="presslist">
+          <li><a href="https://www.abc.net.au/listen/programs/medialand/medialand-influencers-lauren-meisner-bbc-broadcasting/105220442" target="_blank" rel="noopener"><span class="src">ABC · Medialand</span><span class="ph">How influencers became a gendered word with Lauren Meisner</span></a></li>
+          <li><a href="https://www.forbes.com/sites/ardianwibisono/2022/05/25/30-under-30-the-entrepreneurs-content-creators-and-influencers-impacting-the-media-and-marketing-landscape-in-asia/" target="_blank" rel="noopener"><span class="src">Forbes</span><span class="ph">30 Under 30: The Entrepreneurs, Creators &amp; Influencers Impacting Media &amp; Marketing In Asia</span></a></li>
+          <li><a href="https://www.adnews.com.au/news/the-gen-z-focused-publisher-abandoning-meta-platforms" target="_blank" rel="noopener"><span class="src">AdNews</span><span class="ph">The Gen Z-focused publisher abandoning Meta platforms</span></a></li>
+          <li><a href="https://www.mediaweek.com.au/centennial-world-launches-branded-podcast-let-the-girls-game/" target="_blank" rel="noopener"><span class="src">Mediaweek</span><span class="ph">Centennial World launches branded podcast 'Let the Girls Game'</span></a></li>
+          <li><a href="https://www.mediaweek.com.au/lauren-meisner-bumbles-fumble-proved-a-good-brand-apology-works/" target="_blank" rel="noopener"><span class="src">Mediaweek</span><span class="ph">Lauren Meisner: Bumble's fumble proved a good brand apology works</span></a></li>
+          <li><a href="https://www.marketingmag.com.au/featured/capitalising-on-cancel-culture-four-steps-to-speaking-gen-z-language28459/" target="_blank" rel="noopener"><span class="src">Marketing Mag</span><span class="ph">Capitalising on cancel culture: four steps to speaking Gen Z's language</span></a></li>
+          <li><a href="https://www.smartcompany.com.au/business-advice/principles-help-business-tap-us360-billion-gen-z-market/" target="_blank" rel="noopener"><span class="src">SmartCompany</span><span class="ph">The principles that help business tap the US$360 billion Gen Z market</span></a></li>
+          <li><a href="https://www.netinfluencer.com/centennial-world-lauren-meisner/" target="_blank" rel="noopener"><span class="src">Net Influencer</span><span class="ph">Centennial World's Lauren Meisner Exposes Mainstream Media's Blind Spot: The Creator Economy Opportunity</span></a></li>
+          <li><a href="https://missingperspectives.com/posts/centennial-world-lauren-meisner-interview/" target="_blank" rel="noopener"><span class="src">Missing Perspectives</span><span class="ph">In conversation with Centennial World's Lauren Meisner</span></a></li>
+          <li><a href="https://www.pedestrian.tv/news/best-podcasts/" target="_blank" rel="noopener"><span class="src">Pedestrian.TV</span><span class="ph">30 of the best podcasts to listen to right now</span></a></li>
+          <li><a href="https://www.elle.com.au/culture/podcasts-for-women-18020" target="_blank" rel="noopener"><span class="src">ELLE Australia</span><span class="ph">The best podcasts for women</span></a></li>
+          <li><a href="https://www.newshub.co.nz/home/lifestyle/2021/06/generation-z-the-most-powerful-generation-according-to-co-founders-of-centennial-beauty.html" target="_blank" rel="noopener"><span class="src">Newshub (NZ)</span><span class="ph">Gen Z: the most powerful generation, according to Centennial World's founder</span></a></li>
+          <li><a href="https://www.heraldsun.com.au/lifestyle/smart/how-creating-tiktoks-and-playing-video-games-can-help-you-get-a-job/news-story/1809c47339a570ff33bb2c299c2621ff" target="_blank" rel="noopener"><span class="src">Herald Sun</span><span class="ph">How making TikToks and playing video games can help you get a job</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sec">
+        <h2>// <span>recognition</span></h2>
+        <ul class="reclist">
+          <li><b>2020</b><span>Centennial World named <strong>Mumbrella Launch of the Year</strong></span></li>
+          <li><b>2023</b><span>Mediaweek <strong>'Next of the Best'</strong> nominee</span></li>
+        </ul>
+      </div>
+
+
+      <div class="sec">
+        <h2>// <span>selected interviews</span></h2>
+        <p style="font-size:16px;line-height:1.6;opacity:.88;margin-bottom:16px;">Lauren has interviewed some of the biggest names in entertainment and culture, including:</p>
+        <div class="tags">
+          <span>Kim Kardashian</span><span>Andy Cohen</span><span>Madison Beer</span><span>Charli &amp; Dixie D'Amelio</span><span>Saweetie</span>
+        </div>
+        <p class="subnote">&hellip; and many more.</p>
+      </div>
+
+      <div class="cta"><p>Press &amp; media enquiries</p><a href="/contact/">Get in touch &rarr;</a></div>
+    </div>
+  </main>
+
+</body>
+</html>

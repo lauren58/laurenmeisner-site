@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Consulting — Lauren Meisner</title>
+<meta name="description" content="Lauren Meisner helps brands become and stay culturally relevant to young people online, plus podcast production consulting. Clients include Samsung Australia, AMOREPACIFIC, Ozdare and Recess." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23E9D8FB'/%3E%3Cstop offset='.55' stop-color='%23FBE7D6'/%3E%3Cstop offset='1' stop-color='%23F8D2E2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2' y='2' width='60' height='60' rx='16' fill='url(%23g)'/%3E%3Cg transform='translate(13,14) scale(1.7)'%3E%3Cpath d='M3 2l7 18 2.5-7.5L20 10z' fill='%23fff' stroke='%2333293B' stroke-width='2.2' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E" />
+<style>
+  :root{
+    --ink:#33293B;--muted:#74657F;--accent:#6B46C1;
+    --paper:#FBF6F4;--paper-edge:#EADFE6;--bar:#F3EAF1;--cream:#FCF6FA;
+    --ui:"DM Sans",system-ui,sans-serif;--mono:"DM Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--ui);background:#FDEFF4;color:var(--ink);-webkit-font-smoothing:antialiased;position:relative;min-height:100vh;}
+  .aura{position:fixed;inset:-22%;z-index:0;background:radial-gradient(40% 50% at 20% 24%,#C2EBD4 0%,transparent 60%),radial-gradient(46% 54% at 80% 18%,#FFD9B0 0%,transparent 60%),radial-gradient(52% 56% at 86% 72%,#FFC6E6 0%,transparent 62%),radial-gradient(46% 52% at 22% 82%,#FFF0AE 0%,transparent 60%),radial-gradient(60% 62% at 52% 52%,#E6CCFF 0%,transparent 66%),linear-gradient(135deg,#FDEFF4,#F2F7EE);filter:saturate(1.04);animation:drift 36s ease-in-out infinite alternate;}
+  @keyframes drift{from{transform:translate(0,0) rotate(0deg) scale(1.06);}to{transform:translate(-3%,2%) rotate(4deg) scale(1.13);}}
+  .grid{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.32;background-image:linear-gradient(rgba(255,255,255,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.6) 1px,transparent 1px);background-size:86px 86px;-webkit-mask-image:radial-gradient(circle at 50% 40%,#000 20%,transparent 92%);mask-image:radial-gradient(circle at 50% 40%,#000 20%,transparent 92%);}
+  .spark{position:fixed;z-index:2;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z' fill='white'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(0 0 6px rgba(255,255,255,.85));animation:tw 5s ease-in-out infinite;pointer-events:none;}
+  @keyframes tw{0%,100%{opacity:.3;transform:scale(.82) rotate(0deg);}50%{opacity:.9;transform:scale(1.08) rotate(8deg);}}
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.38;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  a{color:inherit;}
+  .navbar{position:relative;z-index:20;display:flex;justify-content:center;align-items:center;gap:12px;padding:26px 16px 10px;flex-wrap:wrap;}
+  .pill{border:1.5px solid var(--ink);border-radius:999px;padding:9px 24px;font-size:15.5px;font-weight:500;color:var(--ink);background:rgba(255,255,255,.28);backdrop-filter:blur(3px);transition:background .2s,transform .15s;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;}
+  .pill:hover{background:rgba(255,255,255,.6);transform:translateY(-1px);}
+  .pill.active{background:var(--cream);text-decoration:none;box-shadow:0 2px 0 rgba(51,41,59,.25);}
+  .window{position:relative;z-index:10;max-width:980px;margin:14px auto 60px;background:var(--paper);border:1px solid var(--paper-edge);border-radius:12px;box-shadow:0 34px 80px -34px rgba(80,40,80,.5),0 2px 0 rgba(255,255,255,.7) inset;overflow:hidden;animation:open .5s cubic-bezier(.2,.8,.2,1) both;}
+  @keyframes open{from{opacity:0;transform:translateY(14px) scale(.99);}to{opacity:1;transform:none;}}
+  .titlebar{display:flex;align-items:center;gap:14px;padding:11px 16px;background:var(--bar);border-bottom:1px solid var(--paper-edge);background-image:repeating-linear-gradient(180deg,rgba(80,60,95,.10) 0 1px,transparent 1px 4px);}
+  .dots{display:flex;gap:7px;}
+  .dots i{width:12px;height:12px;border-radius:50%;display:block;border:1px solid rgba(0,0,0,.10);}
+  .dots i:nth-child(1){background:#B7E6C8;}.dots i:nth-child(2){background:#FFD3A6;}.dots i:nth-child(3){background:#FFC2DF;}
+  .wtitle{font-family:var(--mono);font-size:13px;color:var(--muted);letter-spacing:.02em;}
+  .wmeta{margin-left:auto;font-family:var(--mono);font-size:11.5px;color:var(--muted);}
+  .body{padding:54px clamp(26px,5vw,72px) 60px;}
+  .kicker{font-family:var(--mono);font-size:12.5px;color:var(--accent);letter-spacing:.04em;margin-bottom:18px;}
+  h1{font-size:clamp(42px,6.5vw,76px);font-weight:700;letter-spacing:-.02em;line-height:.98;color:var(--ink);}
+  .intro{margin-top:26px;font-size:clamp(17px,1.6vw,20px);line-height:1.6;max-width:62ch;color:var(--ink);opacity:.86;}
+  .sec{margin-top:58px;}
+  .sec h2{font-size:13px;font-family:var(--mono);font-weight:500;letter-spacing:.08em;color:var(--muted);padding-bottom:12px;border-bottom:1px solid var(--paper-edge);margin-bottom:28px;}
+  .sec h2 span{color:var(--ink);}
+  .cta{margin-top:60px;padding:34px;border:1px dashed var(--paper-edge);border-radius:12px;background:#FCFAFF;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;}
+  .cta p{font-size:20px;font-weight:600;color:var(--ink);}
+  .cta a{font-family:var(--mono);font-size:14px;background:var(--ink);color:#fff;padding:13px 22px;border-radius:8px;text-decoration:none;transition:transform .15s,background .2s;}
+  .cta a:hover{background:var(--accent);transform:translateY(-2px);}
+
+  .services{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .card{border:1px solid var(--paper-edge);border-radius:12px;padding:30px;background:#FCFAFF;transition:transform .18s,box-shadow .2s;}
+  .card:hover{transform:translateY(-3px);box-shadow:0 16px 30px -20px rgba(80,40,80,.4);}
+  .card .no{font-family:var(--mono);font-size:12px;color:var(--accent);}
+  .card h3{font-size:23px;font-weight:600;margin-top:10px;letter-spacing:-.01em;color:var(--ink);}
+  .card p{margin-top:12px;font-size:15.5px;line-height:1.6;color:var(--ink);opacity:.85;}
+  .clients{display:flex;flex-wrap:wrap;gap:12px;}
+  .clients span{font-family:var(--mono);font-size:14px;padding:11px 18px;border:1px solid var(--paper-edge);border-radius:999px;background:#fff;color:var(--ink);}
+  .clientnote{margin-top:16px;font-size:14px;color:var(--muted);}
+
+  @media (max-width:720px){
+    .navbar{gap:8px;padding:18px 12px 8px;}.pill{padding:7px 15px;font-size:14px;}
+    .window{margin:8px 10px 40px;border-radius:10px;}.body{padding:36px 22px 44px;}.wmeta{display:none;}
+    .topics{grid-template-columns:1fr;}.entry{grid-template-columns:1fr;gap:10px;}.services{grid-template-columns:1fr;}.grid{background-size:60px 60px;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="aura"></div>
+  <div class="grid"></div>
+  <span class="spark" style="left:10%;top:24%;width:26px;height:26px;animation-delay:0s;"></span>
+  <span class="spark" style="left:90%;top:30%;width:20px;height:20px;animation-delay:1.2s;"></span>
+  <span class="spark" style="left:85%;top:82%;width:30px;height:30px;animation-delay:.6s;"></span>
+  <span class="spark" style="left:13%;top:80%;width:18px;height:18px;animation-delay:1.8s;"></span>
+
+<nav class="navbar">
+    <a class="pill" href="/">home</a>
+    <a class="pill" href="/about/">about</a>
+    <a class="pill" href="/speaking/">speaking</a>
+    <a class="pill active" href="/consulting/">consulting</a>
+    <a class="pill" href="/ventures/">ventures</a>
+    <a class="pill" href="/press/">press</a>
+    <a class="pill" href="/contact/">contact</a>
+  </nav>
+
+  <main class="window">
+    <div class="titlebar">
+      <span class="dots"><i></i><i></i><i></i></span>
+      <span class="wtitle">consulting.app</span>
+      <span class="wmeta">youth content marketing · podcast production</span>
+    </div>
+    <div class="body">
+      <p class="kicker">// advisory</p>
+      <h1>Consulting.</h1>
+      <p class="intro">Lauren helps brands become &mdash; and stay &mdash; culturally relevant online. She consults in two areas: content marketing for youth audiences and podcast production. Both draw directly on running Centennial World, a multi-show network reaching 15 million young people a month across podcasts, YouTube, TikTok, and newsletter.</p>
+
+      <div class="sec">
+        <h2>// <span>what she does</span></h2>
+        <div class="services">
+          <div class="card">
+            <div class="no">01</div>
+            <h3>Youth content marketing</h3>
+            <p>Helping brands understand and capture young people's attention online &mdash; the trends, habits and behaviours behind how Gen Z actually engages, and how to show up authentically to stay culturally relevant to youth audiences online.</p>
+          </div>
+          <div class="card">
+            <div class="no">02</div>
+            <h3>Podcast production</h3>
+            <p>End-to-end guidance on building and producing podcasts — from format, positioning and audience to the production realities — informed by running a multi-show podcast network day to day.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2>// <span>selected clients</span></h2>
+        <div class="clients">
+          <span>Samsung</span>
+          <span>BRITA</span>
+          <span>Bumble</span>
+          <span>The Ordinary</span>
+          <span>Recess</span>
+          <span>Plaion</span>
+          <span>Tinder</span>
+          <span>MAC Cosmetics</span>
+          <span>Intuit Mailchimp</span>
+          <span>HP</span>
+          <span>Jose Cuervo</span>
+          <span>ING Bank</span>
+          <span>Afterpay</span>
+          <span>Blackbird VC</span>
+          <span>Tempus One</span>
+        </div>
+        <p class="clientnote">A selection of brands Lauren has worked with across youth content marketing and podcast production.</p>
+      </div>
+
+      <div class="cta">
+        <p>Have a brief in mind?</p>
+        <a href="/contact/">Start a conversation →</a>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

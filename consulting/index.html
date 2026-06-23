@@ -54,12 +54,14 @@
   .card .no{font-family:var(--mono);font-size:12px;color:var(--accent);}
   .card h3{font-size:23px;font-weight:600;margin-top:10px;letter-spacing:-.01em;color:var(--ink);}
   .card p{margin-top:12px;font-size:15.5px;line-height:1.6;color:var(--ink);opacity:.85;}
-  .clients{display:flex;flex-wrap:wrap;gap:12px;}
-  .clients span{font-family:var(--mono);font-size:14px;padding:11px 18px;border:1px solid var(--paper-edge);border-radius:999px;background:#fff;color:var(--ink);}
+  .logowall{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+  .logocard{background:#fff;border:1px solid var(--paper-edge);border-radius:14px;height:84px;display:flex;align-items:center;justify-content:center;padding:16px 18px;box-shadow:0 1px 0 rgba(51,41,59,.04);transition:transform .15s,box-shadow .2s;}
+  .logocard:hover{transform:translateY(-2px);box-shadow:0 8px 20px -8px rgba(80,40,80,.28);}
+  .logocard img{max-width:100%;max-height:40px;object-fit:contain;display:block;}
   .clientnote{margin-top:16px;font-size:14px;color:var(--muted);}
 
   @media (max-width:720px){
-    .navbar{gap:8px;padding:18px 12px 8px;}.pill{padding:7px 15px;font-size:14px;}
+    .navbar{gap:8px;padding:18px 12px 8px;}.pill{padding:7px 15px;font-size:14px;}.logowall{grid-template-columns:repeat(3,1fr);gap:12px;}.logocard{height:74px;}
     .window{margin:8px 10px 40px;border-radius:10px;}.body{padding:36px 22px 44px;}.wmeta{display:none;}
     .topics{grid-template-columns:1fr;}.entry{grid-template-columns:1fr;gap:10px;}.services{grid-template-columns:1fr;}.grid{background-size:60px 60px;}
   }
@@ -113,22 +115,22 @@
 
       <div class="sec">
         <h2>// <span>selected clients</span></h2>
-        <div class="clients">
-          <span>Samsung</span>
-          <span>BRITA</span>
-          <span>Bumble</span>
-          <span>The Ordinary</span>
-          <span>Recess</span>
-          <span>Plaion</span>
-          <span>Tinder</span>
-          <span>MAC Cosmetics</span>
-          <span>Intuit Mailchimp</span>
-          <span>HP</span>
-          <span>Jose Cuervo</span>
-          <span>ING Bank</span>
-          <span>Afterpay</span>
-          <span>Blackbird VC</span>
-          <span>Tempus One</span>
+        <div class="logowall">
+          <div class="logocard"><img src="/logo-tinder.png" alt="Tinder"></div>
+          <div class="logocard"><img src="/logo-josecuervo.png" alt="Jose Cuervo"></div>
+          <div class="logocard"><img src="/logo-mailchimp.png" alt="Mailchimp"></div>
+          <div class="logocard"><img src="/logo-tempusone.png" alt="Tempus One"></div>
+          <div class="logocard"><img src="/logo-ing.png" alt="ING"></div>
+          <div class="logocard"><img src="/logo-brita.png" alt="BRITA"></div>
+          <div class="logocard"><img src="/logo-plaion.png" alt="Plaion"></div>
+          <div class="logocard"><img src="/logo-bumble.png" alt="Bumble"></div>
+          <div class="logocard"><img src="/logo-theordinary.png" alt="The Ordinary"></div>
+          <div class="logocard"><img src="/logo-coach.png" alt="Coach"></div>
+          <div class="logocard"><img src="/logo-afterpay.png" alt="Afterpay"></div>
+          <div class="logocard"><img src="/logo-blackbird.png" alt="Blackbird"></div>
+          <div class="logocard"><img src="/logo-qatarairways.png" alt="Qatar Airways"></div>
+          <div class="logocard"><img src="/logo-pandora.png" alt="Pandora"></div>
+          <div class="logocard"><img src="/logo-hp.png" alt="HP"></div>
         </div>
         <p class="clientnote">A selection of brands Lauren has worked with across youth content marketing and podcast production.</p>
       </div>

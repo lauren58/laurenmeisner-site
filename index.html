@@ -276,15 +276,15 @@ nav{position:sticky;top:0;z-index:60;background:var(--paper);border-bottom:1px s
 .tt-fallback a{color:var(--apricot);font-weight:600;border-bottom:1px solid currentColor}
 
 /* ---------- audience comment wall ---------- */
-.cwall{columns:1;column-gap:16px;margin-top:clamp(26px,3.4vw,40px)}
-/* two columns at most: these screenshots are wide, and a third column makes
-   the comment text too small to read, which defeats the point of them */
-@media(min-width:900px){.cwall{columns:2}}
-.cwall figure{break-inside:avoid;margin:0 0 14px;background:#fff;border:1px solid color-mix(in srgb,var(--ink) 14%,transparent);
+/* One column, one width. Two columns left ragged gaps wherever the screenshots
+   were different heights. --cw is set per group so the comment text inside each
+   screenshot lands at roughly the same size as the body copy. */
+.cwall{display:flex;flex-direction:column;gap:14px;margin-top:clamp(26px,3.4vw,40px);
+  max-width:var(--cw,700px)}
+.cwall figure{margin:0;background:#fff;border:1px solid color-mix(in srgb,var(--ink) 14%,transparent);
   transition:transform .4s var(--ease),border-color .3s}
 .cwall figure:hover{transform:translateY(-4px);border-color:var(--ink)}
 .cwall img{width:100%;height:auto;display:block}
-.cwall figure[data-narrow]{max-width:500px}
 .dark .cwall-note{color:color-mix(in srgb,var(--paper) 62%,var(--ink))}
 .cwall-note{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-soft);font-weight:600;margin-top:1.1rem}
 
@@ -434,7 +434,7 @@ a.show:hover .show-body h3::after{transform:translate(2px,-2px);opacity:1}
 #founder .lede,#founder .chips{max-width:68ch}
 .founder-grid{display:grid;gap:clamp(30px,4vw,54px);align-items:start}
 @media(min-width:900px){.founder-grid{grid-template-columns:minmax(0,1fr) 340px}}
-.founder-photo{margin:0;max-width:380px}
+.founder-photo{margin:0;max-width:420px}
 .founder-photo img{width:100%;height:auto;display:block}
 .founder-photo figcaption{font-size:.78rem;color:var(--ink-soft);margin-top:.7rem;font-weight:500}
 
@@ -538,7 +538,7 @@ footer{padding:40px 0;border-top:1px solid color-mix(in srgb,var(--paper) 16%,va
     <h2 class="rv" style="--i:1">We’re where they already are.</h2>
     <p class="lede rv" style="--i:2;margin-top:1.3rem">We publish across podcast, YouTube, TikTok and Substack. We don’t ask our audience to come to us — we publish where young people already are, in the formats they already use.</p>
     <div class="find-grid"><div class="fc rv" style="--i:0"><span class="plat">Video podcasts</span><strong>Infinite Scroll, Mini Scroll &amp; Mini Tech Scroll</strong><span class="stat">400K monthly listens across RSS &amp; YouTube</span><a href="https://open.spotify.com/show/18cqrQI7gMiVfxIMRAeULF" target="_blank" rel="noopener">Listen on Spotify →</a><a href="https://podcasts.apple.com/au/podcast/infinite-scroll/id1499785732" target="_blank" rel="noopener" style="margin-top:.5rem">Listen on Apple →</a></div><div class="fc rv" style="--i:1"><span class="plat">YouTube</span><strong>Centennial World</strong><span class="stat">27.1% engagement rate</span><a href="https://www.youtube.com/@centennialworldpodcastnetwork" target="_blank" rel="noopener">Watch on YouTube →</a></div><div class="fc rv" style="--i:2"><span class="plat">TikTok</span><strong>@centennialworld</strong><span class="stat">5 million monthly views</span><a href="https://www.tiktok.com/@centennialworld" target="_blank" rel="noopener">Follow on TikTok →</a></div><div class="fc rv" style="--i:3"><span class="plat">TikTok</span><strong>@miniscrollpodcast</strong><span class="stat">10 million monthly views</span><a href="https://tiktok.com/@miniscrollpodcast" target="_blank" rel="noopener">Follow on TikTok →</a></div><div class="fc rv" style="--i:4"><span class="plat">Substack</span><strong>Keep Scrolling For…</strong><span class="stat">54% open rate</span><a href="https://centennialworld.substack.com/" target="_blank" rel="noopener">Read on Substack →</a></div></div>
-    <div class="cwall"><figure class="rv" style="--i:0"><img src="comment-mts-surprising.webp" alt="Audience comment" srcset="comment-mts-surprising-sm.webp 760w, comment-mts-surprising.webp 1108w" sizes="(min-width:900px) 580px, calc(100vw - 32px)" loading="lazy"></figure><figure class="rv" data-narrow="1" style="--i:1"><img src="comment-escapism.webp" alt="Audience comment" loading="lazy"></figure><figure class="rv" style="--i:2"><img src="comment-fomo.webp" alt="Audience comment" srcset="comment-fomo-sm.webp 760w, comment-fomo.webp 1108w" sizes="(min-width:900px) 580px, calc(100vw - 32px)" loading="lazy"></figure></div>
+    <div class="cwall" style="--cw:668px"><figure class="rv" style="--i:0"><img src="comment-mts-surprising.webp" alt="Audience comment" srcset="comment-mts-surprising-sm.webp 760w, comment-mts-surprising.webp 1108w" sizes="(min-width:900px) 668px, calc(100vw - 32px)" loading="lazy"></figure><figure class="rv" style="--i:1"><img src="comment-escapism.webp" alt="Audience comment" loading="lazy"></figure><figure class="rv" style="--i:2"><img src="comment-fomo.webp" alt="Audience comment" srcset="comment-fomo-sm.webp 760w, comment-fomo.webp 1108w" sizes="(min-width:900px) 668px, calc(100vw - 32px)" loading="lazy"></figure></div>
     <p class="cwall-note rv">What people say about the shows</p>
   
   </div>
@@ -636,7 +636,7 @@ footer{padding:40px 0;border-top:1px solid color-mix(in srgb,var(--paper) 16%,va
           </div>
           <p class="pair-caption">Filmed outdoors with product placement in every episode.</p>
         </div>
-        <div class="res"><div><span class="num">55.1M</span><span class="over">137% of guarantee</span><p>Impressions</p></div><div><span class="num">821K</span><span class="over">103% of guarantee</span><p>Views &amp; listens</p></div><div><span class="num">35</span><span class="over">TikTok, Reels, Shorts</span><p>Short-form cuts</p></div><div><span class="num">8</span><span class="over">plus pre-roll</span><p>Episodes</p></div></div>
+        <div class="res"><div><span class="num">55.1M</span><span class="over">137% of guarantee</span><p>Impressions</p></div><div><span class="num">821K</span><span class="over">103% of guarantee</span><p>Views &amp; listens</p></div><div><span class="num">35</span><span class="over">TikTok, Reels, Shorts</span><p>Short-form cuts</p></div></div>
       </article>
 
       <article class="case rv" data-cat="beauty" style="--i:4">
@@ -739,7 +739,7 @@ footer{padding:40px 0;border-top:1px solid color-mix(in srgb,var(--paper) 16%,va
     </div>
   </div>
   <div class="wrap">
-    <div class="cwall"><figure class="rv" style="--i:0"><img src="comment-spoiled.webp" alt="Audience comment" srcset="comment-spoiled-sm.webp 760w, comment-spoiled.webp 1200w" sizes="(min-width:900px) 580px, calc(100vw - 32px)" loading="lazy"></figure><figure class="rv" style="--i:1"><img src="comment-morning-isa.webp" alt="Audience comment" srcset="comment-morning-isa-sm.webp 760w, comment-morning-isa.webp 900w" sizes="(min-width:900px) 580px, calc(100vw - 32px)" loading="lazy"></figure><figure class="rv" style="--i:2"><img src="comment-morning-larue.webp" alt="Audience comment" srcset="comment-morning-larue-sm.webp 760w, comment-morning-larue.webp 1136w" sizes="(min-width:900px) 580px, calc(100vw - 32px)" loading="lazy"></figure></div>
+    <div class="cwall" style="--cw:750px"><figure class="rv" style="--i:0"><img src="comment-spoiled.webp" alt="Audience comment" srcset="comment-spoiled-sm.webp 760w, comment-spoiled.webp 1200w" sizes="(min-width:900px) 750px, calc(100vw - 32px)" loading="lazy"></figure><figure class="rv" style="--i:1"><img src="comment-morning-isa.webp" alt="Audience comment" srcset="comment-morning-isa-sm.webp 760w, comment-morning-isa.webp 900w" sizes="(min-width:900px) 750px, calc(100vw - 32px)" loading="lazy"></figure><figure class="rv" style="--i:2"><img src="comment-morning-larue.webp" alt="Audience comment" srcset="comment-morning-larue-sm.webp 760w, comment-morning-larue.webp 1136w" sizes="(min-width:900px) 750px, calc(100vw - 32px)" loading="lazy"></figure></div>
     <p class="cwall-note rv">Unedited comments from YouTube and our DMs</p>
   </div>
 </section>
@@ -757,7 +757,7 @@ footer{padding:40px 0;border-top:1px solid color-mix(in srgb,var(--paper) 16%,va
     </div>
     <p class="eyebrow rv" style="--i:4;margin-top:1.8rem">16 May – 30 September 2026</p>
 
-    <div class="cwall"><figure class="rv" style="--i:0"><img src="comment-tt-petra.webp" alt="TikTok comment" srcset="comment-tt-petra-sm.webp 760w, comment-tt-petra.webp 948w" sizes="(min-width:900px) 580px, calc(100vw - 32px)" loading="lazy"></figure><figure class="rv" style="--i:1"><img src="comment-tt-24min.webp" alt="TikTok comment" srcset="comment-tt-24min-sm.webp 760w, comment-tt-24min.webp 900w" sizes="(min-width:900px) 580px, calc(100vw - 32px)" loading="lazy"></figure><figure class="rv" style="--i:2"><img src="comment-tt-tanti.webp" alt="TikTok comment" srcset="comment-tt-tanti-sm.webp 760w, comment-tt-tanti.webp 934w" sizes="(min-width:900px) 580px, calc(100vw - 32px)" loading="lazy"></figure><figure class="rv" style="--i:3"><img src="comment-tt-pinch.webp" alt="TikTok comment" srcset="comment-tt-pinch-sm.webp 760w, comment-tt-pinch.webp 930w" sizes="(min-width:900px) 580px, calc(100vw - 32px)" loading="lazy"></figure></div>
+    <div class="cwall" style="--cw:652px"><figure class="rv" style="--i:0"><img src="comment-tt-petra.webp" alt="TikTok comment" srcset="comment-tt-petra-sm.webp 760w, comment-tt-petra.webp 948w" sizes="(min-width:900px) 652px, calc(100vw - 32px)" loading="lazy"></figure><figure class="rv" style="--i:1"><img src="comment-tt-24min.webp" alt="TikTok comment" srcset="comment-tt-24min-sm.webp 760w, comment-tt-24min.webp 900w" sizes="(min-width:900px) 652px, calc(100vw - 32px)" loading="lazy"></figure><figure class="rv" style="--i:2"><img src="comment-tt-tanti.webp" alt="TikTok comment" srcset="comment-tt-tanti-sm.webp 760w, comment-tt-tanti.webp 934w" sizes="(min-width:900px) 652px, calc(100vw - 32px)" loading="lazy"></figure><figure class="rv" style="--i:3"><img src="comment-tt-pinch.webp" alt="TikTok comment" srcset="comment-tt-pinch-sm.webp 760w, comment-tt-pinch.webp 930w" sizes="(min-width:900px) 652px, calc(100vw - 32px)" loading="lazy"></figure></div>
     <p class="cwall-note rv">Comments on the <em>Mini Scroll</em> TikTok account</p>
 
     <div class="tt-grid">
@@ -810,7 +810,7 @@ footer{padding:40px 0;border-top:1px solid color-mix(in srgb,var(--paper) 16%,va
     <p class="chan-line rv">Campaigns can combine any of the following:</p>
     <div class="chan"><div class="ch rv" style="--i:0"><strong>Podcasts</strong><span>Infinite Scroll, Mini Scroll, Mini Tech Scroll, custom branded mini series</span></div><div class="ch rv" style="--i:1"><strong>YouTube</strong><span>Centennial World network channel</span></div><div class="ch rv" style="--i:2"><strong>TikTok</strong><span>Centennial World (verified brand account) &amp; Mini Scroll Podcast</span></div><div class="ch rv" style="--i:3"><strong>Substack</strong><span>Keep Scrolling For…</span></div><div class="ch rv" style="--i:4"><strong>Events</strong><span>Get in front of Gen Z consumers IRL</span></div><div class="ch rv" style="--i:5"><strong>Founder-led</strong><span>Lauren Meisner TikTok &amp; Instagram</span></div></div>
 
-    <div class="cwall"><figure class="rv" style="--i:0"><img src="comment-sp-trustfund.webp" alt="Audience comment about a sponsor" srcset="comment-sp-trustfund-sm.webp 760w, comment-sp-trustfund.webp 1200w" sizes="(min-width:900px) 580px, calc(100vw - 32px)" loading="lazy"></figure><figure class="rv" style="--i:1"><img src="comment-sp-brita-filter.webp" alt="Audience comment about a sponsored campaign" loading="lazy"></figure><figure class="rv" style="--i:2"><img src="comment-sp-bumble.webp" alt="Audience comment about a sponsored campaign" loading="lazy"></figure><figure class="rv" style="--i:3"><img src="comment-sp-tuning-in.webp" alt="Audience comment about a sponsor" srcset="comment-sp-tuning-in-sm.webp 760w, comment-sp-tuning-in.webp 1200w" sizes="(min-width:900px) 580px, calc(100vw - 32px)" loading="lazy"></figure></div>
+    <div class="cwall" style="--cw:584px"><figure class="rv" style="--i:0"><img src="comment-sp-trustfund.webp" alt="Audience comment about a sponsor" srcset="comment-sp-trustfund-sm.webp 760w, comment-sp-trustfund.webp 1200w" sizes="(min-width:900px) 584px, calc(100vw - 32px)" loading="lazy"></figure><figure class="rv" style="--i:1"><img src="comment-sp-brita-filter.webp" alt="Audience comment about a sponsored campaign" loading="lazy"></figure><figure class="rv" style="--i:2"><img src="comment-sp-bumble.webp" alt="Audience comment about a sponsored campaign" loading="lazy"></figure><figure class="rv" style="--i:3"><img src="comment-sp-tuning-in.webp" alt="Audience comment about a sponsor" srcset="comment-sp-tuning-in-sm.webp 760w, comment-sp-tuning-in.webp 1200w" sizes="(min-width:900px) 584px, calc(100vw - 32px)" loading="lazy"></figure></div>
     <p class="cwall-note rv">Our audience welcomes our sponsors rather than scrolling past them</p>
 
     <h3 class="rv" style="margin-top:clamp(40px,5vw,62px)">Ready-to-buy packages</h3>
@@ -909,10 +909,11 @@ footer{padding:40px 0;border-top:1px solid color-mix(in srgb,var(--paper) 16%,va
     </div>
 
     <figure class="founder-photo rv" style="--i:2">
-      <img src="talk-virality.webp"
-           alt="Lauren Meisner delivering a keynote presentation, holding a microphone at a lectern"
-           width="380" height="509" loading="lazy">
-      <figcaption>Keynote presentation on reaching Gen&nbsp;Z for Australian media buying agencies.</figcaption>
+      <img src="founder-portrait.webp"
+           srcset="founder-portrait-sm.webp 460w, founder-portrait.webp 840w"
+           sizes="(min-width:900px) 340px, min(420px, calc(100vw - 32px))"
+           alt="Lauren Meisner, Founder and Director of Centennial World"
+           width="840" height="1050" loading="lazy">
     </figure>
   </div>
 </section>

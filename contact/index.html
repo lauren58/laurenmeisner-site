@@ -105,15 +105,16 @@
       <p class="kicker">// say hi</p>
       <h1>Let's talk.</h1>
       <p class="intro">For speaking, consulting, media partnerships or press, feel free to send a note below.</p>
-      <form class="cform" id="cform" action="https://formsubmit.co/ajax/lauren@centennialworld.com" method="POST">
+      <form class="cform" id="cform" action="https://api.web3forms.com/submit" method="POST">
         <div class="cfield"><label for="cf-name">Name</label><input id="cf-name" type="text" name="name" autocomplete="name" required /></div>
         <div class="cfield"><label for="cf-email">Email</label><input id="cf-email" type="email" name="email" autocomplete="email" required /></div>
         <div class="cfield"><label for="cf-reason">What's it about?</label><select id="cf-reason" name="reason"><option>Speaking</option><option>Consulting</option><option>Media partnership</option><option>Press</option><option>Something else</option></select></div>
         <div class="cfield"><label for="cf-msg">Message</label><textarea id="cf-msg" name="message" required></textarea></div>
-        <input type="hidden" name="_subject" value="New enquiry from laurenmeisner.com" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="access_key" value="ff4cd8e1-56c4-4a6f-9deb-fdf5a1607aea" />
+        <input type="hidden" name="subject" value="New enquiry from laurenmeisner.com" />
+        <input type="hidden" name="from_name" value="laurenmeisner.com" />
+        <input type="hidden" name="redirect" value="https://laurenmeisner.com/contact/?sent=1" />
+        <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" />
         <button class="send" type="submit">Send message &rarr;</button>
         <p class="cnote">Prefer email? <a href="mailto:lauren@centennialworld.com">lauren@centennialworld.com</a></p>
       </form>
@@ -131,14 +132,21 @@
   (function(){
     var f=document.getElementById('cform'), ok=document.getElementById('formok');
     if(!f) return;
-    f.addEventListener('submit',function(e){
+    function showThanks(){ f.style.display='none'; ok.classList.add('show'); ok.scrollIntoView({behavior:'smooth',block:'center'}); }
+    if (/[?&]sent=1/.test(location.search)){ showThanks(); try{ history.replaceState(null,'',location.pathname); }catch(err){} }
+    function onSubmit(e){
       e.preventDefault();
       var btn=f.querySelector('.send'); btn.disabled=true; btn.textContent='Sending\u2026';
       fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
         .then(function(r){return r.json();})
-        .then(function(){ f.style.display='none'; ok.classList.add('show'); ok.scrollIntoView({behavior:'smooth',block:'center'}); })
-        .catch(function(){ btn.disabled=false; btn.innerHTML='Send message &rarr;'; alert('Something went wrong \u2014 please email lauren@centennialworld.com directly.'); });
-    });
+        .then(function(j){ if(j && j.success===false) throw new Error(j.message||'rejected'); showThanks(); })
+        .catch(function(){
+          // background request blocked or the service is unwell: post it properly
+          f.removeEventListener('submit', onSubmit);
+          HTMLFormElement.prototype.submit.call(f);
+        });
+    }
+    f.addEventListener('submit', onSubmit);
   })();
   </script>
 </body>
